@@ -1,6 +1,6 @@
-import type React from "react"
-import "@/app/globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
+import type React from "react";
+import "@/app/globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata = {
   title: "ElevateGrad - Empower Your Campus Experience",
@@ -16,24 +16,33 @@ export const metadata = {
   icons: {
     icon: "/logo.png",
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="min-h-dvh flex flex-col">
+            <Header />
+            {children}
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }
 
-
-
-import './globals.css'
+import "./globals.css";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
