@@ -134,7 +134,7 @@ export default function LandingPage() {
                   </p>
                 </div>
               </div>
-              <div className="mt-12 rounded-xl overflow-hidden border shadow-lg">
+              <div className="mt-12 rounded-xl overflow-hidden border shadow-lg animate-fade-in">
                 <Image
                   src="/placeholder.svg?height=600&width=1200"
                   alt="CampusX Dashboard"
@@ -375,7 +375,7 @@ export default function LandingPage() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="group text-secondary-foreground hover:text-primary-foreground"
+                    className="text-secondary-foreground hover:text-primary-foreground"
                   >
                     Join Now - It's Free!
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -477,7 +477,9 @@ export default function LandingPage() {
 
             <div className="mt-12 flex flex-col items-center gap-4 text-center">
               <p className="text-muted-foreground">Still have questions?</p>
-              <Button variant="primary">Contact Support</Button>
+              <Link href={"/contact-support"}>
+                <Button variant="primary">Contact Support</Button>
+              </Link>
             </div>
           </div>
         </div>

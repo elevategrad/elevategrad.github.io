@@ -79,13 +79,8 @@ export default function RequestDemo() {
   });
 
   function onSubmit(data: FormValues) {
-    // In a real application, you would send this data to your API
     console.log(data);
-
-    // Show success message
     setIsSubmitted(true);
-
-    // Reset form after submission
     setTimeout(() => {
       form.reset();
       setIsSubmitted(false);
@@ -93,6 +88,7 @@ export default function RequestDemo() {
   }
   return (
     <main className="flex-1">
+      {/* Hero Section */}
       <section
         id="hero"
         className="relative overflow-hidden py-20 md:py-32 bg-teal/20"
@@ -118,6 +114,8 @@ export default function RequestDemo() {
           </div>
         </div>
       </section>
+
+      {/* Values Section */}
       <section id="values" className="py-20 bg-background">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center gap-4 text-center mb-16 animate-fade-in">
@@ -197,10 +195,9 @@ export default function RequestDemo() {
           </div>
         </div>
       </section>
-      <section
-        id="schedule-demo"
-        className="py-20 scroll-mt-16 bg-teal/20"
-      >
+
+      {/* Demo Form Section */}
+      <section id="schedule-demo" className="py-20 bg-teal/20">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center gap-4 text-center mb-16 animate-fade-in">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -227,7 +224,7 @@ export default function RequestDemo() {
             <Form {...form}>
               <form
                 onSubmit={form.handleSubmit(onSubmit)}
-                className="max-w-2xl mx-auto space-y-6 animate-fade-in"
+                className="max-w-2xl mx-auto space-y-6 animate-fade-in bg-white p-8 rounded-lg shadow-sm"
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <FormField
@@ -399,7 +396,7 @@ export default function RequestDemo() {
                   type="submit"
                   size="lg"
                   variant="primary"
-                  className="w-full md:w-auto"
+                  className="w-full"
                 >
                   Request a Demo
                 </Button>
@@ -408,6 +405,8 @@ export default function RequestDemo() {
           )}
         </div>
       </section>
+
+      {/* FAQ Section */}
       <section id="faq" className="py-20 bg-teal/10">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center gap-4 text-center mb-16 animate-fade-in">
@@ -496,7 +495,9 @@ export default function RequestDemo() {
 
             <div className="mt-12 flex flex-col items-center gap-4 text-center">
               <p className="text-muted-foreground">Still have questions?</p>
-              <Button variant="primary">Contact Support</Button>
+              <Link href={"/contact-support"}>
+                <Button variant="primary">Contact Support</Button>
+              </Link>
             </div>
           </div>
         </div>

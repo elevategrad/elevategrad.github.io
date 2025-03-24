@@ -21,10 +21,10 @@ const Footer = () => {
   return (
     <footer className="border-t bg-teal/20">
       <div className="container px-4 py-12 md:px-6 md:py-16">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-2">
           <div className="flex flex-col gap-4">
             <Logo size="sm" />
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground max-w-sm">
               Empowering students, universities, and employers to connect and
               thrive in the academic and professional world.
             </p>
@@ -42,11 +42,36 @@ const Footer = () => {
               ))}
             </div>
           </div>
-          <div>
-            <h3 className="mb-4 text-sm font-semibold">Platform</h3>
-            <ul className="space-y-2 text-sm">
-              {["Features", "Engagement", "Pricing", "Testimonials", "FAQ"].map(
-                (item) => (
+          <div className="grid grid-cols-2">
+            <div>
+              <h3 className="mb-4 text-sm font-semibold">Quick Links</h3>
+              <ul className="space-y-2 text-sm">
+                {[
+                  { label: "Get Started", href: "/get-started" },
+                  { label: "Request Demo", href: "/request-demo" },
+                  { label: "Contact Support", href: "/contact-support" },
+                ].map((item) => (
+                  <li key={item.label}>
+                    <Link
+                      href={item.href}
+                      className="text-muted-foreground hover:text-foreground"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="mb-4 text-sm font-semibold">Legal</h3>
+              <ul className="space-y-2 text-sm">
+                {[
+                  "Terms of Service",
+                  "Privacy Policy",
+                  "Cookie Policy",
+                  "GDPR",
+                  "Accessibility",
+                ].map((item) => (
                   <li key={item}>
                     <Link
                       href="#"
@@ -55,47 +80,9 @@ const Footer = () => {
                       {item}
                     </Link>
                   </li>
-                )
-              )}
-            </ul>
-          </div>
-          <div>
-            <h3 className="mb-4 text-sm font-semibold">Company</h3>
-            <ul className="space-y-2 text-sm">
-              {["About Us", "Blog", "Careers", "Press", "Contact"].map(
-                (item) => (
-                  <li key={item}>
-                    <Link
-                      href="#"
-                      className="text-muted-foreground hover:text-foreground"
-                    >
-                      {item}
-                    </Link>
-                  </li>
-                )
-              )}
-            </ul>
-          </div>
-          <div>
-            <h3 className="mb-4 text-sm font-semibold">Legal</h3>
-            <ul className="space-y-2 text-sm">
-              {[
-                "Terms of Service",
-                "Privacy Policy",
-                "Cookie Policy",
-                "GDPR",
-                "Accessibility",
-              ].map((item) => (
-                <li key={item}>
-                  <Link
-                    href="#"
-                    className="text-muted-foreground hover:text-foreground"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
         <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
