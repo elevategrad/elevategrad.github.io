@@ -130,7 +130,7 @@ export default function ContactSupport() {
             <TabsList className="grid w-full grid-cols-3 mb-8">
               <TabsTrigger value="students">Students</TabsTrigger>
               <TabsTrigger value="universities">
-                Universities & Admins
+                Universities
               </TabsTrigger>
               <TabsTrigger value="employers">Employers</TabsTrigger>
             </TabsList>

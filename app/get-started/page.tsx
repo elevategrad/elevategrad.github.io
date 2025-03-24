@@ -29,26 +29,37 @@ const PARTNERED_UNIVERSITIES = [
 
 export default function GetStartedPage() {
   const router = useRouter();
-  const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  const [selectedOption, setSelectedOption] = useState<string>();
   const [showSchoolDropdown, setShowSchoolDropdown] = useState(false);
   const [showNonPartnerMessage, setShowNonPartnerMessage] = useState(false);
+  const [showPartnerLogin, setShowPartnerLogin] = useState(false);
+  const [selectedUniversity, setSelectedUniversity] = useState<string>();
+  const [showConnectXLogin, setShowConnectXLogin] = useState(false);
 
   const handleConnectXClick = () => {
-    window.location.href = "https://connectx.elevategrad.com";
+    setSelectedOption("connectx");
+    setShowSchoolDropdown(false);
+    setShowNonPartnerMessage(false);
+    setShowPartnerLogin(false);
+    setShowConnectXLogin(true);
   };
 
   const handleCampusXClick = () => {
     setSelectedOption("campusx");
-    setShowSchoolDropdown(true);
     setShowNonPartnerMessage(false);
+    setShowConnectXLogin(false);
+    setShowPartnerLogin(false);
+    setShowSchoolDropdown(true);
   };
 
   const handleUniversityChange = (value: string) => {
     if (value === "Not Listed") {
+      setShowPartnerLogin(false);
       setShowNonPartnerMessage(true);
     } else if (PARTNERED_UNIVERSITIES.some((uni) => uni.id === value)) {
+      setSelectedUniversity(value);
       setShowNonPartnerMessage(false);
-      window.location.href = `https://campusx.elevategrad.com?school=${value}`;
+      setShowPartnerLogin(true);
     }
   };
 
@@ -72,32 +83,34 @@ export default function GetStartedPage() {
             }`}
             onClick={handleCampusXClick}
           >
-            <CardHeader className="pb-2">
-              <CardTitle className="flex items-center gap-2">
-                <School className="h-5 w-5 text-primary" />
-                CampusX
-              </CardTitle>
-              <CardDescription>
-                For students from partnered universities
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-muted-foreground mb-4">
-                Access exclusive opportunities, resources, and events available
-                through your university&apos;s partnership.
-              </p>
-              <Button
-                variant="outline"
-                className="w-full group"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleCampusXClick();
-                }}
-              >
-                Select CampusX
-                <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </CardContent>
+            <Link href="#select-university">
+              <CardHeader className="pb-2">
+                <CardTitle className="flex items-center gap-2">
+                  <School className="h-5 w-5 text-primary" />
+                  CampusX
+                </CardTitle>
+                <CardDescription>
+                  For students from partnered universities
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Access exclusive opportunities, resources, and events
+                  available through your university&apos;s partnership.
+                </p>
+                <Button
+                  variant="outline"
+                  className="w-full group"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleCampusXClick();
+                  }}
+                >
+                  Select CampusX
+                  <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </CardContent>
+            </Link>
           </Card>
         </div>
 
@@ -108,38 +121,43 @@ export default function GetStartedPage() {
             }`}
             onClick={handleConnectXClick}
           >
-            <CardHeader className="pb-2">
-              <CardTitle className="flex items-center gap-2">
-                <Users className="h-5 w-5 text-primary" />
-                ConnectX
-              </CardTitle>
-              <CardDescription>
-                Open to all students for networking & career opportunities
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-muted-foreground mb-4">
-                Connect with professionals, access career resources, and
-                discover opportunities regardless of your university.
-              </p>
-              <Button
-                variant="outline"
-                className="w-full group"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleConnectXClick();
-                }}
-              >
-                Select ConnectX
-                <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </CardContent>
+            <Link href="#select-role">
+              <CardHeader className="pb-2">
+                <CardTitle className="flex items-center gap-2">
+                  <Users className="h-5 w-5 text-primary" />
+                  ConnectX
+                </CardTitle>
+                <CardDescription>
+                  Open to all students for networking & career opportunities
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Connect with professionals, access career resources, and
+                  discover opportunities regardless of your university.
+                </p>
+                <Button
+                  variant="outline"
+                  className="w-full group"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleConnectXClick();
+                  }}
+                >
+                  Select ConnectX
+                  <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </CardContent>
+            </Link>
           </Card>
         </div>
       </div>
 
       {showSchoolDropdown && (
-        <div className="mt-8 w-full max-w-md animate-fade-in">
+        <div
+          id="select-university"
+          className="mt-8 w-full max-w-md animate-fade-in"
+        >
           <div className="text-center mb-4">
             <h2 className="text-xl font-semibold">Select Your University</h2>
             <p className="text-sm text-muted-foreground">
@@ -175,16 +193,66 @@ export default function GetStartedPage() {
           <p className="text-sm text-muted-foreground mb-6">
             In the meantime, you can still access our platform through ConnectX.
           </p>
-          <div className="flex gap-2">
+          <div className="flex flex-col md:flex-row gap-2">
             <Link href={"/request-demo"}>
               <Button size="lg" variant="outline">
                 Request a Demo
               </Button>
             </Link>
-            <Button size="lg" variant={"primary"} onClick={handleConnectXClick}>
+            <Button size="lg" variant="primary" onClick={handleConnectXClick}>
               Continue with ConnectX
             </Button>
           </div>
+        </div>
+      )}
+
+      {showPartnerLogin && (
+        <div className="mt-8 w-full max-w-md animate-fade-in text-center">
+          <Button
+            size="lg"
+            variant="primary"
+            className="w-full"
+            onClick={() =>
+              router.push(
+                `https://campusx.elevategrad.com?school=${selectedUniversity}`
+              )
+            }
+          >
+            Login with{" "}
+            {
+              PARTNERED_UNIVERSITIES.find(
+                (uni) => uni.id === selectedUniversity
+              )?.name
+            }
+          </Button>
+        </div>
+      )}
+
+      {showConnectXLogin && (
+        <div
+          id="select-role"
+          className="mt-8 w-full max-w-md animate-fade-in text-center flex flex-col md:flex-row gap-4"
+        >
+          <Button
+            size="lg"
+            variant="primary"
+            className="w-full"
+            onClick={() =>
+              router.push("https://connectx.elevategrad.com?role=student")
+            }
+          >
+            Continue as Student
+          </Button>
+          <Button
+            size="lg"
+            variant="primary"
+            className="w-full"
+            onClick={() =>
+              router.push("https://connectx.elevategrad.com?role=recruiter")
+            }
+          >
+            Continue as Recruiter
+          </Button>
         </div>
       )}
     </div>
