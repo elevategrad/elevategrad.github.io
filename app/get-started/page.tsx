@@ -156,7 +156,7 @@ export default function GetStartedPage() {
       {showSchoolDropdown && (
         <div
           id="select-university"
-          className="mt-8 w-full max-w-md animate-fade-in"
+          className="mt-16 w-full max-w-md animate-fade-in"
         >
           <div className="text-center mb-4">
             <h2 className="text-xl font-semibold">Select Your University</h2>
@@ -182,7 +182,7 @@ export default function GetStartedPage() {
       )}
 
       {showNonPartnerMessage && (
-        <div className="mt-8 p-6 bg-muted rounded-lg w-full max-w-md text-center animate-fade-in">
+        <div className="mt-16 p-6 bg-muted rounded-lg w-full max-w-md text-center animate-fade-in">
           <h3 className="text-lg font-medium mb-2">
             Your university is not yet partnered with us
           </h3>
@@ -207,14 +207,14 @@ export default function GetStartedPage() {
       )}
 
       {showPartnerLogin && (
-        <div className="mt-8 w-full max-w-md animate-fade-in text-center">
+        <div className="mt-16 w-full max-w-md animate-fade-in text-center">
           <Button
             size="lg"
             variant="primary"
             className="w-full"
             onClick={() =>
               router.push(
-                `https://campusx.elevategrad.com?school=${selectedUniversity}`
+                `https://campus.elevategrad.com?university=${selectedUniversity}`
               )
             }
           >
@@ -231,14 +231,14 @@ export default function GetStartedPage() {
       {showConnectXLogin && (
         <div
           id="select-role"
-          className="mt-8 w-full max-w-md animate-fade-in text-center flex flex-col md:flex-row gap-4"
+          className="mt-16 w-full max-w-md animate-fade-in text-center flex flex-col md:flex-row gap-4"
         >
           <Button
             size="lg"
             variant="primary"
             className="w-full"
             onClick={() =>
-              router.push("https://connectx.elevategrad.com?role=student")
+              router.push("https://connect.elevategrad.com?role=student")
             }
           >
             Continue as Student
@@ -248,7 +248,7 @@ export default function GetStartedPage() {
             variant="primary"
             className="w-full"
             onClick={() =>
-              router.push("https://connectx.elevategrad.com?role=recruiter")
+              router.push("https://connect.elevategrad.com?role=recruiter")
             }
           >
             Continue as Recruiter

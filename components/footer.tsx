@@ -19,8 +19,8 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="border-t bg-teal/20">
-      <div className="container px-4 py-12 md:px-6 md:py-16">
+    <footer className="border-t bg-teal/50">
+      <div className="container px-4 py-8 md:px-6">
         <div className="grid gap-8 md:grid-cols-2">
           <div className="flex flex-col gap-4">
             <Logo size="sm" />

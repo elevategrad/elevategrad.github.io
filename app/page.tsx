@@ -23,7 +23,7 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section
         id="hero"
-        className="relative overflow-hidden py-20 md:py-32 bg-teal/20"
+        className="relative overflow-hidden py-20 md:py-32 bg-gradient-to-b from-teal/50 to-background"
       >
         <div className="container px-4 md:px-6">
           <div className="grid gap-12 md:grid-cols-2 md:gap-16 items-center">
@@ -71,13 +71,13 @@ export default function LandingPage() {
                 </p>
               </div>
             </div>
-            <div className="relative mx-auto aspect-video overflow-hidden rounded-xl bg-muted md:order-last animate-fade-in">
+            <div className="relative overflow-hidden rounded-xl bg-muted md:order-last animate-fade-in">
               <Image
                 src="/placeholder.svg?height=720&width=1280"
                 alt="Students collaborating"
                 width={1280}
                 height={720}
-                className="object-cover"
+                className="object-center"
                 priority
               />
             </div>
@@ -188,7 +188,10 @@ export default function LandingPage() {
       </section>
 
       {/* Community Engagement */}
-      <section id="engagement" className="py-20 bg-teal/10">
+      <section
+        id="engagement"
+        className="py-20 bg-gradient-to-b from-teal/50 to-background"
+      >
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center gap-4 text-center mb-16 animate-fade-in">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">

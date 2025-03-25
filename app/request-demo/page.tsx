@@ -91,7 +91,7 @@ export default function RequestDemo() {
       {/* Hero Section */}
       <section
         id="hero"
-        className="relative overflow-hidden py-20 md:py-32 bg-teal/20"
+        className="relative overflow-hidden py-20 md:py-32 bg-gradient-to-b from-teal/50 to-background"
       >
         <div className="container px-4 md:px-6">
           <div className="flex flex-col gap-6 animate-fade-in mx-auto text-center max-w-6xl">
@@ -166,7 +166,7 @@ export default function RequestDemo() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 bg-teal/10 rounded-xl p-8 animate-fade-in">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 bg-teal/20 rounded-xl p-8 animate-fade-in">
             <div className="flex flex-col items-center text-center">
               <div className="bg-primary/10 p-3 rounded-full mb-4">
                 <Users className="h-6 w-6 text-primary" />
@@ -197,7 +197,10 @@ export default function RequestDemo() {
       </section>
 
       {/* Demo Form Section */}
-      <section id="schedule-demo" className="py-20 bg-teal/20">
+      <section
+        id="schedule-demo"
+        className="py-20 bg-gradient-to-b from-teal/50 to-background"
+      >
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center gap-4 text-center mb-16 animate-fade-in">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -407,7 +410,7 @@ export default function RequestDemo() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-20 bg-teal/10">
+      <section id="faq" className="py-20">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center gap-4 text-center mb-16 animate-fade-in">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
