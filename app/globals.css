@@ -75,6 +75,10 @@
   }
 }
 
+.bg-gradient-primary {
+  @apply bg-gradient-to-r from-primary/90 to-primary;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;

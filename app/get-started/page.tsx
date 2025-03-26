@@ -199,7 +199,7 @@ export default function GetStartedPage() {
                 Request a Demo
               </Button>
             </Link>
-            <Button size="lg" variant="primary" onClick={handleConnectXClick}>
+            <Button size="lg" variant="default" onClick={handleConnectXClick}>
               Continue with ConnectX
             </Button>
           </div>
@@ -210,15 +210,15 @@ export default function GetStartedPage() {
         <div className="mt-16 w-full max-w-md animate-fade-in text-center">
           <Button
             size="lg"
-            variant="primary"
+            variant="default"
             className="w-full"
             onClick={() =>
               router.push(
-                `https://campus.elevategrad.com?university=${selectedUniversity}`
+                `https://campus.elevategrad.com/signup?university=${selectedUniversity}`
               )
             }
           >
-            Login with{" "}
+            Continue with{" "}
             {
               PARTNERED_UNIVERSITIES.find(
                 (uni) => uni.id === selectedUniversity
@@ -235,7 +235,7 @@ export default function GetStartedPage() {
         >
           <Button
             size="lg"
-            variant="primary"
+            variant="default"
             className="w-full"
             onClick={() =>
               router.push("https://connect.elevategrad.com?role=student")
@@ -245,7 +245,7 @@ export default function GetStartedPage() {
           </Button>
           <Button
             size="lg"
-            variant="primary"
+            variant="default"
             className="w-full"
             onClick={() =>
               router.push("https://connect.elevategrad.com?role=recruiter")

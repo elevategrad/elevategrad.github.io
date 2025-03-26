@@ -37,7 +37,7 @@ export default function LandingPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mt-4">
                 <Link href={"/get-started"}>
-                  <Button size="lg" variant="primary">
+                  <Button size="lg" variant="default">
                     Get Started
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
@@ -481,7 +481,7 @@ export default function LandingPage() {
             <div className="mt-12 flex flex-col items-center gap-4 text-center">
               <p className="text-muted-foreground">Still have questions?</p>
               <Link href={"/contact-support"}>
-                <Button variant="primary">Contact Support</Button>
+                <Button variant="default">Contact Support</Button>
               </Link>
             </div>
           </div>

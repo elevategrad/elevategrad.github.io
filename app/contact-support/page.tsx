@@ -102,7 +102,7 @@ export default function ContactSupport() {
                 </Button>
               </Link>
               <Link href={"#contact-form"} className="animate-slide-in-right">
-                <Button size="lg" variant="primary">
+                <Button size="lg" variant="default">
                   <Send className="mr-2 h-5 w-5" /> Submit a Support Request
                 </Button>
               </Link>
@@ -405,7 +405,7 @@ export default function ContactSupport() {
                 <Button
                   type="submit"
                   size="lg"
-                  variant="primary"
+                  variant="default"
                   className="w-full"
                 >
                   Send Message
@@ -438,7 +438,7 @@ export default function ContactSupport() {
                 Chat with our support team in real-time for immediate
                 assistance.
               </p>
-              <Button className="mt-4" variant="primary">
+              <Button className="mt-4" variant="default">
                 Start Chat
               </Button>
             </Card> */}
@@ -552,7 +552,7 @@ export default function ContactSupport() {
             </p>
             <Button
               size="lg"
-              variant="primary"
+              variant="default"
               onClick={() =>
                 document
                   .getElementById("contact-form")

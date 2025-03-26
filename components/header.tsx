@@ -87,7 +87,7 @@ const Header = () => {
         {pathname !== "/get-started" && (
           <div className="flex items-center gap-4">
             <Link href={"/get-started"}>
-              <Button size="sm" variant="primary">
+              <Button size="sm" variant="default">
                 Get Started
               </Button>
             </Link>

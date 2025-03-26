@@ -1,6 +1,8 @@
 import type React from "react";
-import "@/app/globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import "./globals.css";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 export const metadata = {
   title: "ElevateGrad - Empower Your Campus Experience",
@@ -42,7 +44,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-import "./globals.css";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
