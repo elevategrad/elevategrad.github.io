@@ -26,12 +26,12 @@ const Header = () => {
             >
               Engagement
             </Link>
-            <Link
+            {/* <Link
               href="#testimonials"
               className="text-sm font-medium hover:text-primary"
             >
               Testimonials
-            </Link>
+            </Link> */}
             <Link
               href="#faq"
               className="text-sm font-medium hover:text-primary"

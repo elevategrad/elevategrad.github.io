@@ -48,7 +48,7 @@ export default function LandingPage() {
                   </Button>
                 </Link>
               </div>
-              <div className="flex items-center gap-4 mt-4">
+              {/* <div className="flex items-center gap-4 mt-4">
                 <div className="flex -space-x-2">
                   {[1, 2, 3, 4].map((i) => (
                     <div
@@ -69,11 +69,11 @@ export default function LandingPage() {
                   Trusted by <span className="font-medium">10,000+</span>{" "}
                   students and faculty
                 </p>
-              </div>
+              </div> */}
             </div>
-            <div className="relative overflow-hidden rounded-xl bg-muted md:order-last animate-fade-in">
+            <div className="relative overflow-hidden rounded-xl bg-muted md:order-last animate-slide-in-right">
               <Image
-                src="/placeholder.svg?height=720&width=1280"
+                src="./landing_hero.jpeg"
                 alt="Students collaborating"
                 width={1280}
                 height={720}
@@ -136,7 +136,7 @@ export default function LandingPage() {
               </div>
               <div className="mt-12 rounded-xl overflow-hidden border shadow-lg animate-fade-in">
                 <Image
-                  src="/placeholder.svg?height=600&width=1200"
+                  src="./landing_campusX.jpeg"
                   alt="CampusX Dashboard"
                   width={1200}
                   height={600}
@@ -175,7 +175,7 @@ export default function LandingPage() {
               </div>
               <div className="mt-12 rounded-xl overflow-hidden border shadow-lg animate-fade-in">
                 <Image
-                  src="/placeholder.svg?height=600&width=1200"
+                  src="./landing_connectX.jpeg"
                   alt="ConnectX Dashboard"
                   width={1200}
                   height={600}
@@ -197,9 +197,9 @@ export default function LandingPage() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
               A Well-Connected Student is More Likely to Stay
             </h2>
-            <p className="max-w-[800px] text-lg text-muted-foreground">
+            <p className="max-w-6xl text-lg text-muted-foreground">
               ElevateGrad helps students build friendships early, keeping them
-              engaged from offer to arrival.
+              engaged from offer to graduation and beyond.
             </p>
           </div>
 
@@ -218,7 +218,7 @@ export default function LandingPage() {
               </div>
               <div className="order-1 md:order-2 rounded-xl overflow-hidden border shadow-md animate-slide-in-right">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="./landing_engagement_1.jpeg"
                   alt="Student Connections"
                   width={600}
                   height={400}
@@ -230,7 +230,7 @@ export default function LandingPage() {
             <div className="grid md:grid-cols-2 items-center gap-8">
               <div className="rounded-xl overflow-hidden border shadow-md animate-slide-in-left">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="./landing_engagement_2.jpeg"
                   alt="Belonging and Engagement"
                   width={600}
                   height={400}
@@ -242,10 +242,11 @@ export default function LandingPage() {
                   Creating a Sense of Belonging
                 </h3>
                 <p className="text-muted-foreground">
-                  ElevateGrad helps students establish friendships and a sense
-                  of belonging before they even step onto campus. With over 1
-                  million messages exchanged per month, it is the largest
-                  student community platform in higher education.
+                  ElevateGrad helps students build friendships and feel
+                  connected before they even arrive on campus. As the most
+                  vibrant student community in higher education, it fosters
+                  meaningful conversations, creating a welcoming environment
+                  from day one.
                 </p>
               </div>
             </div>
@@ -264,7 +265,7 @@ export default function LandingPage() {
               </div>
               <div className="order-1 md:order-2 rounded-xl overflow-hidden border shadow-md animate-slide-in-right">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="./landing_engagement_3.jpeg"
                   alt="Effortless Community Engagement"
                   width={600}
                   height={400}
@@ -272,12 +273,36 @@ export default function LandingPage() {
                 />
               </div>
             </div>
+
+            <div className="grid md:grid-cols-2 items-center gap-8">
+              <div className="rounded-xl overflow-hidden border shadow-md animate-slide-in-left">
+                <Image
+                  src="./landing_engagement_4.jpeg"
+                  alt="Career Growth and Internships"
+                  width={600}
+                  height={400}
+                  className="w-full object-cover"
+                />
+              </div>
+              <div className="flex flex-col gap-4 animate-slide-in-right">
+                <h3 className="text-2xl font-bold">
+                  Seamless Access to Jobs & Internships
+                </h3>
+                <p className="text-muted-foreground">
+                  ElevateGrad connects students with exclusive job and
+                  internship opportunities tailored to their skills and
+                  interests. Through AI-powered recommendations and direct
+                  connections with recruiters, students can land their first
+                  internship or full-time role with ease.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Testimonials */}
-      <section
+      {/* <section
         id="testimonials"
         className="py-20 bg-background animate-fade-in"
       >
@@ -359,7 +384,7 @@ export default function LandingPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-primary text-primary-foreground rounded-xl">
@@ -395,7 +420,7 @@ export default function LandingPage() {
                 </Link>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4 animate-slide-in-right">
+            {/* <div className="grid grid-cols-2 gap-4 animate-slide-in-right">
               <div className="flex flex-col items-center gap-2 rounded-lg bg-primary-foreground/10 p-6 text-center">
                 <h3 className="text-4xl font-bold">10k+</h3>
                 <p>Active Students</p>
@@ -412,7 +437,7 @@ export default function LandingPage() {
                 <h3 className="text-4xl font-bold">95%</h3>
                 <p>Satisfaction Rate</p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

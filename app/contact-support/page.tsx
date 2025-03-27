@@ -341,9 +341,7 @@ export default function ContactSupport() {
                         </FormControl>
                         <SelectContent>
                           <SelectItem value="student">Student</SelectItem>
-                          <SelectItem value="university">
-                            University Admin
-                          </SelectItem>
+                          <SelectItem value="university">University</SelectItem>
                           <SelectItem value="employer">Employer</SelectItem>
                           <SelectItem value="other">Other</SelectItem>
                         </SelectContent>

@@ -166,7 +166,7 @@ export default function RequestDemo() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 bg-teal/20 rounded-xl p-8 animate-fade-in">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 bg-teal/20 rounded-xl p-8 animate-fade-in">
             <div className="flex flex-col items-center text-center">
               <div className="bg-primary/10 p-3 rounded-full mb-4">
                 <Users className="h-6 w-6 text-primary" />
@@ -192,7 +192,7 @@ export default function RequestDemo() {
                 Messages Exchanged Per Month
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
