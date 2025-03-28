@@ -179,7 +179,7 @@ export default function ContactSupport() {
                     How do I onboard my university?
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
-                    To onboard your university, schedule a demo with our team
+                    To onboard your university, request for a demo with our team
                     using the form on our website. After the demo, we'll provide
                     you with an implementation plan and guide you through the
                     integration process, which typically takes 4-6 weeks.

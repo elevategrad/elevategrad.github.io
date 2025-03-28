@@ -100,13 +100,13 @@ export default function RequestDemo() {
             </h1>
             <p className="text-xl text-muted-foreground md:text-2xl">
               Empower your students with seamless campus engagement and career
-              opportunities. Schedule a demo to see how ElevateGrad can
-              transform your university experience.
+              opportunities. Request a demo to see how ElevateGrad can transform
+              your university experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-4 justify-center">
-              <Link href="#schedule-demo">
+              <Link href="#demo-form">
                 <Button size="lg" variant="default">
-                  Schedule a Demo
+                  Request a Demo
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>
@@ -198,13 +198,13 @@ export default function RequestDemo() {
 
       {/* Demo Form Section */}
       <section
-        id="schedule-demo"
+        id="demo-form"
         className="py-20 bg-gradient-to-b from-teal/50 to-background"
       >
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center gap-4 text-center mb-16 animate-fade-in">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              Schedule a Demo
+              Request a Demo
             </h2>
             <p className="max-w-[700px] text-lg text-muted-foreground">
               See how ElevateGrad can transform your university's student

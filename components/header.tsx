@@ -49,10 +49,10 @@ const Header = () => {
               Values
             </Link>
             <Link
-              href="#schedule-demo"
+              href="#demo-form"
               className="text-sm font-medium hover:text-primary"
             >
-              Schedule Demo
+              Request Demo
             </Link>
             <Link
               href="#faq"

@@ -5,7 +5,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 
 export const metadata = {
-  title: "ElevateGrad - Empower Your Campus Experience",
+  title: "ElevateGrad - Empower Your Campus to Career Experience",
   description:
     "ElevateGrad enhances student engagement, networking, and career opportunities. Connect with peers, find events, and advance your career.",
   keywords: [

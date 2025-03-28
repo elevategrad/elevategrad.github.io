@@ -29,7 +29,7 @@ export default function LandingPage() {
           <div className="grid gap-12 md:grid-cols-2 md:gap-16 items-center">
             <div className="flex flex-col gap-6 animate-slide-in-left">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
-                Elevate Your Campus Experience with ElevateGrad
+                Elevate Your Campus to Career Experience with ElevateGrad
               </h1>
               <p className="text-xl text-muted-foreground md:text-2xl">
                 Stay connected, engage with student communities, and unlock
